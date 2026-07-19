@@ -57,6 +57,25 @@ python .\manage_stack.py initdb
 python .\manage_stack.py down
 ```
 
+## Chat with Persistent Memory
+
+From the repository root:
+
+```powershell
+cd .\app
+python .\chat_with_memory.py
+```
+
+- Each user and assistant turn is embedded and stored in PostgreSQL (`public.embeddings`).
+- Memory retrieval is scoped by `conversation_id`, so you can resume the same thread later.
+
+Resume an existing conversation:
+
+```powershell
+cd .\app
+python .\chat_with_memory.py --conversation-id "your-conversation-id"
+```
+
 Optional build flag:
 
 ```powershell
