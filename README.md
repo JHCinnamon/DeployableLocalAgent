@@ -1,4 +1,4 @@
-# Deployable Local Agents
+# Deployable Local Ollama Agent
 
 Local Docker stack for running:
 
